@@ -340,13 +340,14 @@ main {
 \*-----------------------------------*/
 .sidebar {
   margin-bottom: 15px;
-  max-height: none;
-  overflow: visible;
+  max-height: 112px;
+  overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: none; }
+.sidebar.active { max-height: 405px; }
 
+/* Add this media query */
 @media (max-width: 580px) {
   .sidebar,
   .sidebar.active {
@@ -418,8 +419,8 @@ main {
 .info_more-btn span { display: none; }
 
 .sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   transition: var(--transition-2);
 }
 
@@ -1144,15 +1145,6 @@ iframe {
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
-@media (min-width: 580px) and (max-width: 1249px) {
-  .info_more-btn { display: none; } /* Hide the info more button */
-  .sidebar-info_more { /* Adjust sidebar info more visibility */
-    opacity: 1;
-    visibility: visible;
-    position: static; /* Ensure it doesn't overlap other elements */
-  }
-}
-
 
 /**
  * responsive larger than 450px screen
@@ -1254,7 +1246,7 @@ iframe {
    */
 
   .sidebar {
-    max-height: 1800px;
+    max-height: 180px;
     margin-bottom: 30px;
   }
 
