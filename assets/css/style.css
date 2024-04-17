@@ -338,7 +338,6 @@ main {
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
-
 .sidebar {
   margin-bottom: 15px;
   max-height: 112px;
@@ -348,6 +347,14 @@ main {
 
 .sidebar.active { max-height: 405px; }
 
+/* Add this media query */
+@media (max-width: 580px) {
+  .sidebar,
+  .sidebar.active {
+    max-height: none; /* Allow sidebar to expand as much as needed */
+    overflow: auto; /* Add scrollbars if content exceeds height */
+  }
+}
 .sidebar-info {
   position: relative;
   display: flex;
