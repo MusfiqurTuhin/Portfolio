@@ -1146,15 +1146,10 @@ iframe {
 \*-----------------------------------*/
 @media (min-width: 580px) and (max-width: 1249px) {
   .info_more-btn { display: none; } /* Hide the info more button */
-  .sidebar-info_more {
+  .sidebar-info_more { /* Adjust sidebar info more visibility */
     opacity: 1;
     visibility: visible;
-    max-height: none; /* Allow content to expand */
-    overflow: visible; /* Ensure content is always visible */
-    position: relative; /* Adjust position to prevent overlapping */
-    top: auto;
-    right: auto;
-    transform: none;
+    position: static; /* Ensure it doesn't overlap other elements */
   }
 }
 
@@ -1259,7 +1254,7 @@ iframe {
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 1800px;
     margin-bottom: 30px;
   }
 
