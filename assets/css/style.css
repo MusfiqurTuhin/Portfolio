@@ -346,6 +346,20 @@ main {
 }
 
 .sidebar.active { max-height: 405px; }
+.btn2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f5f4e1;
+  color: #1e3d59;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #1e3d59;
+}
+
+.btn2:hover {
+  background-color: #f5f4e1;
+  color: #00b22d;
+}
 
 /* Add this media query */
 @media (max-width: 580px) {
