@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Md. Musfiqur Rahman (Tuhin) - Graphic & Web Designer | AI Researcher</title>
-
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"></noscript>
+  
   <!-- Canonical URL (Prevents Duplicate Content Issues) -->
   <link rel="canonical" href="https://musfiqurrahman.com/">
 
@@ -67,7 +69,8 @@
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.onload=null;this.media='all';">
+  
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,8 +95,11 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/Md Musfiqur Rahman Tuhin Img.png" alt="Musfiqur Tuhin" width="80">
-        </figure>
+          <picture>
+            <source srcset="./assets/images/Md Musfiqur Rahman Tuhin Img.webp" type="image/webp">
+            <img src="./assets/images/Md Musfiqur Rahman Tuhin Img.webp"  alt="Musfiqur Tuhin">
+          </picture>
+                  </figure>
 
         <div class="info-content">
    <a href= "./assets/images/MdMusfiqurRahman_CV.pdf" download class="name" title="Musfiqur Tuhin" target="_blank">‌Musfiqu‌ Tuhin</a>
