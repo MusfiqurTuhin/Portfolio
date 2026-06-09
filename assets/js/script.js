@@ -6,7 +6,7 @@ const elementToggleFunc = function (e) {
 };
 
 // Sidebar - Always Visible (Removed Toggle Button)
-const sidebar = document.querySelector("[data-sidebar]"); 
+const sidebar = document.querySelector("[data-sidebar]");
 sidebar.classList.add("active"); // Ensure sidebar is always visible
 
 // Removed sidebar button functionality
@@ -25,7 +25,7 @@ const testimonialsItem = document.querySelectorAll("[data-testimonials-item]"),
   modalText = document.querySelector("[data-modal-text]"),
   testimonialsModalFunc = function () {
     modalContainer.classList.toggle("active"),
-    overlay.classList.toggle("active");
+      overlay.classList.toggle("active");
   };
 
 for (let i = 0; i < testimonialsItem.length; i++)
@@ -64,8 +64,8 @@ const filterItems = document.querySelectorAll("[data-filter-item]"),
       "all" === e
         ? filterItems[t].classList.add("active")
         : e === filterItems[t].dataset.category
-        ? filterItems[t].classList.add("active")
-        : filterItems[t].classList.remove("active");
+          ? filterItems[t].classList.add("active")
+          : filterItems[t].classList.remove("active");
   };
 
 let lastClickedBtn = filterBtn[0];
@@ -142,3 +142,34 @@ for (let i = 0; i < navigationLinks.length; i++)
         navigationLinks[l].classList.remove("active");
       }
   });
+
+// (Legacy Nature Parallax Removed)
+
+// --------------------------------------------------------------------------
+//                         AI ECOSYSTEM PARALLAX EFFECT
+// --------------------------------------------------------------------------
+
+const grid = document.getElementById('grid');
+const code = document.getElementById('code');
+const projects = document.getElementById('projects');
+const text = document.getElementById('text');
+const profile = document.getElementById('profile');
+
+window.addEventListener('scroll', () => {
+  let value = window.scrollY;
+
+  // Only animate if within viewport height to save performance
+  if (value <= window.innerHeight) {
+    if (grid) grid.style.top = value * 0.5 + 'px';       // Background stays mostly put
+    if (code) code.style.left = value * -0.5 + 'px';     // Code drifts to the left
+    if (projects) projects.style.top = value * 0.15 + 'px';  // Projects move up slowly
+
+    if (text) {
+      text.style.marginTop = value * 1.5 + 'px'; // Text drops down fast
+      text.style.opacity = Math.max(0, 1 - (value / 500));    // Text fades out
+    }
+
+    // Profile stays fixed or moves very slightly to look like the "Camera" anchor
+    if (profile) profile.style.top = value * 0.05 + 'px';
+  }
+});
